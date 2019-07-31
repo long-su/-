@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>详情页</title>
     <link rel="stylesheet" href="../css/particulars.css">
@@ -111,7 +110,7 @@
             <p><strong>位置及周边</strong></p>
 
         </div>
-        <div id="mmapp">
+        <div id="container">
 
         </div>
     </div>
@@ -140,7 +139,7 @@
                 </ul>
             </li>
             <li class="last">
-                 推荐理由：同户型、通风好、采光好
+                推荐理由：同户型、通风好、采光好
             </li>
             <li class="sanjiao">
                 <img src="sanjiao.png" alt="">
@@ -170,11 +169,11 @@
                 </ul>
             </li>
             <li class="last">
-                    推荐理由：同户型、通风好、采光好
-               </li>
-               <li class="sanjiao">
-                   <img src="sanjiao.png" alt="">
-               </li>
+                推荐理由：同户型、通风好、采光好
+            </li>
+            <li class="sanjiao">
+                <img src="sanjiao.png" alt="">
+            </li>
         </ul>
         <p><strong style="color:#ccc;">查看更多相似房源</strong></p>
     </div>
@@ -222,18 +221,13 @@
         setRem();
         window.onresize = setRem;
     }
-   	var map = new BMap.Map("mmapp");
-	map.centerAndZoom(new BMap.Point(113.688935,34.790147), 11);
-	map.addControl(new BMap.MapTypeControl({
-		mapTypes:[
-            BMAP_NORMAL_MAP,
-            BMAP_HYBRID_MAP
-        ]}));	  
-	map.setCurrentCity("郑州");
-	map.enableScrollWheelZoom(true); 
-   
+    var map = new BMap.Map("container");
+    var point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point, 15);
+    map.enableScrollWheelZoom(true);
 
-   
+
+
     $(function () {
         var index = 0;
         setInterval(function () {
