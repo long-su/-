@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的</title>
+    <link rel="stylesheet" href="../css/my.css">
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <p><img src="urse.png" alt=""></p>
+                <p>我的</p>
+            </li>
+            <li>
+                <p><img src="down.png" alt=""></p>
+                <p>下载</p>
+            </li>
+        </ul>
+        <div class="up">
+            <div class="pic">
+                <img src="urse2.png" alt="">
+
+            </div>
+            <div class="deng">
+                登录
+            </div>
+        </div>
+    </div>
+    <section>
+        <ul>
+            <li>
+                <div class="left">
+                    <span><img src="icon1.png" alt=""></span>我关注的房源
+                </div>
+                <div class="right">
+                    <img src="right.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <span><img src="icon2.png" alt=""></span>我关注的房源
+                </div>
+                <div class="right">
+                    <img src="right.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <span><img src="icon3.png" alt=""></span>我关注的房源
+                </div>
+                <div class="right">
+                    <img src="right.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <span><img src="icon4.png" alt=""></span>我关注的房源
+                </div>
+                <div class="right">
+                    <img src="right.png" alt="">
+                </div>
+            </li>
+        </ul>
+    </section>
+</body>
+<script>
+    window.onload = function () {
+        function setRem() {
+            var client = document.documentElement.clientWidth || document.body.clientWidth;
+            var width_w = 320;
+            var size = (client / width_w) * 100;
+            document.documentElement.style.fontSize = size + "px";
+        }
+        setRem();
+        window.onresize = setRem;
+    }
+</script>
+</html>
